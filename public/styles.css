@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&family=IBM+Plex+Mono&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  font-size: 62.5%/1.7em;
+}
+
+body {
+  margin: 0;
+  font: 1rem "Inter", Arial, sans-serif;
+  color: #1a1d1e;
+  background: #fff;
+}
+
+#root {
+  padding: 1rem;
+}
