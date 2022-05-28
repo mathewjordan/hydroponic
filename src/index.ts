@@ -1,5 +1,3 @@
-function grow() {
-  return;
-}
+import { Hydroponic } from "hydroponic";
 
-export default grow;
+export default Hydroponic;
