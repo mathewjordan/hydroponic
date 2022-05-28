@@ -11,8 +11,25 @@ export class Hydroponic {
     this.config = Object.assign({});
   }
 
+  getId() {
+    return "";
+  }
+
+  getLabel() {
+    return { none: [""] };
+  }
+
+  loadItems() {
+    return [];
+  }
+
   grow() {
-    console.log(`grow`);
-    return;
+    const strain: Collection = {
+      id: this.getId(),
+      type: "Collection",
+      label: this.getLabel(),
+      items: this.loadItems(),
+    };
+    return strain;
   }
 }

@@ -1,10 +1,12 @@
 import React, { StrictMode } from "react";
 import { Hydroponic } from "./index";
 import { createRoot } from "react-dom/client";
+import { Collection } from "@iiif/presentation-3";
 
 const Wrapper = () => {
-  const collection = new Hydroponic();
-  collection.grow();
+  const hydroponic = new Hydroponic();
+  const collection = hydroponic.grow() as Collection;
+  console.log(collection);
   return <></>;
 };
 
