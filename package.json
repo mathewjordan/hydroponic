@@ -4,7 +4,14 @@
   "description": "IIIF Collection grow kit for @samvera/bloom-iiif",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && node build.js&& tsc --emitDeclarationOnly --outDir dist && rm -rf dist/tsconfig.tsbuildinfo dist/index.cjs.js.map dist/index.esm.js.map",
+    "build:static": "NODE_ENV=static OUT_DIR=static node build-static.js",
+    "clean": "rimraf dist",
+    "dev": "NODE_ENV=development node serve.js",
+    "test": "jest --watch",
+    "test-ci": "jest",
+    "prepublishOnly": "npm run build",
+    "ts-lint": "tsc --noEmit --incremental --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,23 @@
   "bugs": {
     "url": "https://github.com/mathewjordan/hydroponic/issues"
   },
-  "homepage": "https://github.com/mathewjordan/hydroponic#readme"
+  "homepage": "https://github.com/mathewjordan/hydroponic#readme",
+  "devDependencies": {
+    "@iiif/presentation-3": "^1.0.5",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.14.41",
+    "esbuild-envfile-plugin": "^1.0.2",
+    "jest": "^28.1.0",
+    "live-server": "^1.2.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.3",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {},
+  "files": [
+    "dist"
+  ]
 }
