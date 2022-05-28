@@ -16,6 +16,9 @@
     "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
     "noUnusedLocals": false, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
+    "paths": {
+      "@/*": ["*"]
+    },
     "resolveJsonModule": true, // Include modules imported with .json extension
     "outDir": "./dist",
     "skipLibCheck": true, // Skip type checking of all declaration files

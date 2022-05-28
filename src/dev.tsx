@@ -1,5 +1,5 @@
 import React, { StrictMode } from "react";
-import Hydroponic from "./index";
+import { Hydroponic } from "./index";
 import { createRoot } from "react-dom/client";
 
 const Wrapper = () => {

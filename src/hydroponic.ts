@@ -1,6 +1,8 @@
 import { Collection } from "@iiif/presentation-3";
 
-export type HydroponicConfig = {};
+export type HydroponicConfig = {
+  items: string[];
+};
 
 export class Hydroponic {
   private readonly config: HydroponicConfig;
