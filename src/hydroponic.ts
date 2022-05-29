@@ -1,8 +1,21 @@
-import { Collection } from "@iiif/presentation-3";
+import { Collection, InternationalString } from "@iiif/presentation-3";
 
-export type HydroponicConfig = {
-  items: string[];
+export type HydroponicInstance = {
+  id: string;
+  label: InternationalString;
+  summary?: InternationalString;
+  homepageId?: string;
 };
+
+export type HydroponicItem = {
+  id: string;
+  homepageId?: string;
+};
+
+export interface HydroponicConfig {
+  instance: HydroponicInstance;
+  items: HydroponicItem[];
+}
 
 export class Hydroponic {
   private readonly config: HydroponicConfig;
@@ -10,6 +23,10 @@ export class Hydroponic {
   constructor(config: Partial<HydroponicConfig>) {
     this.config = Object.assign({});
   }
+
+  defaultFetcher = (url: string) => {
+    return fetch(url).then((r) => r.json());
+  };
 
   getId() {
     return "";
@@ -24,6 +41,7 @@ export class Hydroponic {
   }
 
   grow() {
+    console.log(this.config);
     const strain: Collection = {
       id: this.getId(),
       type: "Collection",
