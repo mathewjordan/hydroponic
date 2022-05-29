@@ -12,41 +12,39 @@ export type HydroponicItem = {
   homepageId?: string;
 };
 
-export interface HydroponicConfig {
+export type HydroponicConfig = {};
+
+export interface HydroponicGrow {
   instance: HydroponicInstance;
   items: HydroponicItem[];
 }
 
 export class Hydroponic {
-  private readonly config: HydroponicConfig;
+  constructor(config: Partial<HydroponicConfig>) {}
 
-  constructor(config: Partial<HydroponicConfig>) {
-    this.config = Object.assign({});
-  }
-
-  defaultFetcher = (url: string) => {
+  fetcher = (url: string) => {
     return fetch(url).then((r) => r.json());
   };
 
-  getId() {
-    return "";
+  loadItems(items: HydroponicItem[]) {
+    return items.map((item) => {
+      const data = this.fetcher(item.id);
+      console.log(data);
+      return {
+        id: item.id,
+        type: "Manifest",
+        label: { none: ["Smokies"] },
+      };
+    });
   }
 
-  getLabel() {
-    return { none: [""] };
-  }
-
-  loadItems() {
-    return [];
-  }
-
-  grow() {
-    console.log(this.config);
-    const strain: Collection = {
-      id: this.getId(),
+  grow(instance: HydroponicInstance, items: HydroponicItem[]) {
+    const { id, label, summary, homepageId } = instance;
+    const strain = {
+      id: id,
       type: "Collection",
-      label: this.getLabel(),
-      items: this.loadItems(),
+      label: label,
+      items: this.loadItems(items),
     };
     return strain;
   }
