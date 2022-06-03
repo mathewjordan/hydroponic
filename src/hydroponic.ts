@@ -1,4 +1,10 @@
-import { Collection, InternationalString } from "@iiif/presentation-3";
+import {
+  CollectionNormalized,
+  InternationalString,
+  ManifestNormalized,
+} from "@iiif/presentation-3";
+import { convertPresentation2 } from "@iiif/parser/presentation-2";
+import { useEffect, useState } from "react";
 
 export type HydroponicInstance = {
   id: string;
@@ -22,30 +28,67 @@ export interface HydroponicGrow {
 export class Hydroponic {
   constructor(config: Partial<HydroponicConfig>) {}
 
-  fetcher = (url: string) => {
-    return fetch(url).then((r) => r.json());
+  vaultFetcher = (url: string) => {
+    const [data, setData] = useState<
+      ManifestNormalized | CollectionNormalized | undefined
+    >();
+
+    useEffect(() => {
+      fetch(url).then((response) =>
+        response.json().then((response) => {
+          let json = response;
+          if (
+            json["@context"] ===
+            "http://iiif.io/api/presentation/2/context.json"
+          )
+            json = convertPresentation2(json);
+
+          setData(json);
+        })
+      );
+    }, []);
+
+    if (data && data.id) return data;
   };
 
-  loadItems(items: HydroponicItem[]) {
-    return items.map((item) => {
-      const data = this.fetcher(item.id);
-      console.log(data);
-      return {
-        id: item.id,
-        type: "Manifest",
-        label: { none: ["Smokies"] },
-      };
-    });
+  loadItem(item: HydroponicItem, homepageId: string | undefined) {
+    const data = this.vaultFetcher(item.id);
+
+    if (data) {
+      const { id, type, label, thumbnail, homepage } = data;
+      const entry = { id, type, label, thumbnail, homepage };
+
+      if (!thumbnail) {
+        const body = data.items[0].items[0].items[0].body;
+        delete body.label;
+        entry.thumbnail = [body];
+      }
+
+      if (homepageId) {
+        entry.homepage = [
+          {
+            id: homepageId,
+            type: "Text",
+            label,
+            format: "text/html",
+          },
+        ];
+      }
+
+      return entry;
+    }
   }
 
   grow(instance: HydroponicInstance, items: HydroponicItem[]) {
-    const { id, label, summary, homepageId } = instance;
-    const strain = {
+    const { id, label, summary, homepage } = instance;
+    return {
       id: id,
       type: "Collection",
       label: label,
-      items: this.loadItems(items),
+      summary: summary,
+      items: items
+        .map((item) => this.loadItem(item, homepageId))
+        .filter((item) => item),
     };
-    return strain;
   }
 }
