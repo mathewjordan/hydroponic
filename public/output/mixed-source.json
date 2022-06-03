@@ -1,0 +1,129 @@
+{
+  "id": "http://127.0.0.1:8080/output/mixed-source.json",
+  "type": "Collection",
+  "label": { "none": ["Sample"] },
+  "summary": { "none": ["Sample"] },
+  "homepage": [
+    {
+      "id": "https://foo.bar/baz",
+      "type": "Text",
+      "label": { "none": "Sample" },
+      "format": "text/html"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/7e/56/09/dc/-a/b7/1-/49/8a/-8/69/3-/19/6e/a3/8c/8b/ca-manifest.json",
+      "type": "Manifest",
+      "label": {
+        "none": ["Handwritten letter from John James Audubon to his sons"]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/6a90a8ef-07c9-40d3-8252-95bc066bac9e/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/6a90a8ef-07c9-40d3-8252-95bc066bac9e",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/b5/2d/5d/93/-a/11/7-/43/e9/-9/0c/7-/43/4f/a1/21/2b/60-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["[Manuscript notebook]."] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/c748711f-1eba-4d7e-ac9c-91b6e92c072b/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/c748711f-1eba-4d7e-ac9c-91b6e92c072b",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/16/66/86/99/-7/0a/8-/48/8a/-9/63/3-/12/27/d7/86/f7/13-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Horae Beatae Virginis."] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/5279d74a-f8ef-4daa-823a-08ad690e5fd1/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/5279d74a-f8ef-4daa-823a-08ad690e5fd1",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/f3/4e/ec/84/-2/37/1-/45/a3/-b/85/7-/bd/f1/95/93/3e/4f-manifest.json",
+      "type": "Manifest",
+      "label": {
+        "none": ["Cy commence le livre nom[m]e la discipline damour divine."]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/cc8b1862-bc19-4ce9-84f7-1496c2d5808d/full/600,/0/default.jpg",
+          "type": "Image",
+          "summary": { "none": ["page 1 recto"] },
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/cc8b1862-bc19-4ce9-84f7-1496c2d5808d",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/df/9a/96/dc/-7/66/d-/4b/a5/-b/f9/1-/fe/29/4e/1e/05/cb-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Monterey Pop clipping"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/a9a1e732-8d8b-437f-8d6b-7a2309d5df23/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/a9a1e732-8d8b-437f-8d6b-7a2309d5df23",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/47/d2/76/f6/-f/a2/2-/49/91/-9/bf/3-/98/b3/f6/8f/0b/c5-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Elton John ad"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/f9e13f67-0fbd-44d4-810e-bd5d5231f84b/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/f9e13f67-0fbd-44d4-810e-bd5d5231f84b",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

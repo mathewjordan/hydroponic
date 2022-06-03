@@ -51,7 +51,7 @@ export class Hydroponic {
     if (data && data.id) return data;
   };
 
-  loadItem(item: HydroponicItem, homepageId: string | undefined) {
+  loadItem(item: HydroponicItem) {
     const data = this.vaultFetcher(item.id);
 
     if (data) {
@@ -64,7 +64,7 @@ export class Hydroponic {
         entry.thumbnail = [body];
       }
 
-      if (homepageId) {
+      if (item?.homepageId) {
         entry.homepage = [
           {
             id: homepageId,
@@ -86,9 +86,8 @@ export class Hydroponic {
       type: "Collection",
       label: label,
       summary: summary,
-      items: items
-        .map((item) => this.loadItem(item, homepageId))
-        .filter((item) => item),
+      homepage: homepage,
+      items: items.map((item) => this.loadItem(item)).filter((item) => item),
     };
   }
 }
