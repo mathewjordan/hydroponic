@@ -10,12 +10,12 @@ export type HydroponicInstance = {
   id: string;
   label: InternationalString;
   summary?: InternationalString;
-  homepageId?: string;
+  homepage?: any;
 };
 
 export type HydroponicItem = {
   id: string;
-  homepageId?: string;
+  href?: string;
 };
 
 export type HydroponicConfig = {};
@@ -64,10 +64,10 @@ export class Hydroponic {
         entry.thumbnail = [body];
       }
 
-      if (item?.homepageId) {
+      if (item?.href) {
         entry.homepage = [
           {
-            id: homepageId,
+            id: item.href,
             type: "Text",
             label,
             format: "text/html",
