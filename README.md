@@ -1,20 +1,56 @@
 # hydroponic :seedling:
 
-IIIF Collection grow kit for [@samvera/bloom-iiif](https://github.com/samvera-labs/bloom-iiif)
+IIIF Collection grow kit for [@samvera/bloom-iiif](https://github.com/samvera-labs/bloom-iiif).
 
-## Shapes
+## Usage
 
-**Collection**
+### Define new collection structure.
+```jsx
+const instance = {
+  id: "https://publisdhed.uri/for/the/collection.json",
+  label: { none: ["My Curated Collection"] },
+  summary: { none: ["A short summary of this collection, optionally."] },
+  homepage: [
+    {
+      id: "https://published.homepage/for/the/collection",
+      type: "Text",
+      label: { none: "An optional homepage for this collection." },
+      format: "text/html",
+    },
+  ],
+}
 
-- type: Collection
-- id
-- label
-- summary (optional)
-- homepage (optional)
-- items[]
-  - type: Manifest | Collection
-  - id
-  - label
-  - summary (optional)
-  - homepage (optional)
-  - thumbnail (optional)
+const items = [
+  {id: "https://manifest.id/uri.json"},
+  {id: "https://manifest.id/uri.json", href: "optional homepage override for item, writes as homepage property"},
+  {id: "https://manifest.id/uri.json"},
+  {id: "https://collection.id/uri.json"},
+  {id: "https://manifest.id/uri.json"},
+  {id: "https://manifest.id/uri.json"}
+]
+```
+
+### Define new collection structure.
+```jsx
+const hydroponic = new Hydroponic();
+const collection = hydroponic.grow(instance, items);
+```
+
+
+## Constructed JSON Shape
+
+**IIIF Presentation API 3.0 Collection**
+
+- @context: **"http://iiif.io/api/presentation/3/context.json"**
+- type: **"Collection"**
+- id: **string**
+- label: **InternationalString**
+- summary: **InternationalString** (optional)
+- homepage: **ExternalResource[]** (optional)
+- items[]:
+  - type: **"Manifest" | "Collection"**
+  - id: **string**
+  - label: **InternationalString**
+  - summary: **InternationalString** (optional)
+  - homepage: **ExternalResource[]** (optional)
+  - thumbnail: **ContentResource[]** (optional)
