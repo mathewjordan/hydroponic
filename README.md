@@ -22,7 +22,7 @@ const instance = {
 
 const items = [
   {id: "https://manifest.id/uri.json"},
-  {id: "https://manifest.id/uri.json", href: "optional homepage override for item, writes as homepage property"},
+  {id: "https://manifest.id/uri.json", href: "https://optional.id/for/this/items/homepage/entry"},
   {id: "https://manifest.id/uri.json"},
   {id: "https://collection.id/uri.json"},
   {id: "https://manifest.id/uri.json"},
