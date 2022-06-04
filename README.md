@@ -4,7 +4,7 @@ IIIF Collection grow kit for [@samvera/bloom-iiif](https://github.com/samvera-la
 
 ## Usage
 
-### Define new collection structure.
+### Define new collection structure
 ```jsx
 const instance = {
   id: "https://publisdhed.uri/for/the/collection.json",
@@ -30,10 +30,12 @@ const items = [
 ]
 ```
 
-### Define new collection structure.
+### Grow your Bloom ready IIIF Collection
 ```jsx
 const hydroponic = new Hydroponic();
 const collection = hydroponic.grow(instance, items);
+
+// `collection` now can be written to file, screen, or elsewhere for your use.
 ```
 
 
