@@ -1,0 +1,212 @@
+{
+  "id": "http://127.0.0.1:8080/output/tankas-voyager-linrothe.json",
+  "type": "Collection",
+  "label": { "none": ["Related items"] },
+  "summary": {
+    "none": [
+      "Search results for `voyager linrothe` and the <strong>Genre</strong> `tankas (scrolls or banners)`"
+    ]
+  },
+  "homepage": [
+    {
+      "id": "https://dc.library.northwestern.edu/search?q=%22voyager+linrothe%22&results=1&Genre=%5B%22tankas+%28scrolls+or+banners%29%22%5D",
+      "type": "Text",
+      "label": { "none": "Related items" },
+      "format": "text/html"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/f3/6a/58/a7/-3/2a/0-/42/34/-a/1d/e-/95/c7/e2/4c/d8/a4-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Buddha. Detail: Amitāyus"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/acdaef88-f938-4b9c-b388-4748b85d8150/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/acdaef88-f938-4b9c-b388-4748b85d8150",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/57/20/c4/a7/-d/c7/5-/43/ee/-b/cc/5-/ed/20/f1/fa/6f/ac-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Vajrabhairava with Consort"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/bdc5c46b-2823-432f-8304-c85b1f3c4e3c/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/bdc5c46b-2823-432f-8304-c85b1f3c4e3c",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/66/5a/1d/bb/-4/cf/3-/4b/0d/-8/a9/f-/91/52/c6/b8/b2/d0-manifest.json",
+      "type": "Manifest",
+      "label": {
+        "none": [
+          "Wutun Xia (Seng ge gzhung ma mgo) Monastery. Detail: sgos sku (applique textile thangka), unrolled"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/f93df585-90fc-4ab1-aa54-98eea727c16f/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/f93df585-90fc-4ab1-aa54-98eea727c16f",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/9b/b0/6e/56/-c/85/8-/4c/b8/-8/08/b-/a3/16/53/97/ef/c4-manifest.json",
+      "type": "Manifest",
+      "label": {
+        "none": [
+          "Avalokiteshvara with Eleven Faces and One Thousand Hands. Detail: upper left"
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/40fb7057-fe04-40d9-b828-be4b49e88447/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/40fb7057-fe04-40d9-b828-be4b49e88447",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/3e/9c/f6/32/-6/1e/6-/4b/47/-a/92/b-/0f/73/ae/72/68/cd-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Lama with Handprints and Footprints"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/9323cfd2-6d8f-49a3-a556-4327911c2dd7/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/9323cfd2-6d8f-49a3-a556-4327911c2dd7",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/08/cb/1e/92/-3/14/8-/42/6e/-a/60/6-/48/18/10/63/4a/93-manifest.json",
+      "type": "Manifest",
+      "label": {
+        "none": ["Amitāyus. Detail: figure in lotus hat, center left"]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/d5449e78-bfbb-4df5-bb04-abd06cc5d241/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/d5449e78-bfbb-4df5-bb04-abd06cc5d241",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/fc/b0/cd/8f/-2/5c/3-/4e/ec/-a/f7/8-/52/63/9a/8f/fa/41-manifest.json",
+      "type": "Manifest",
+      "label": {
+        "none": ["Avalokiteshvara with Eleven Faces and One Thousand Hands"]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/7859e981-8bf8-46f9-99a9-8d2070fe8d9f/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/7859e981-8bf8-46f9-99a9-8d2070fe8d9f",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/d6/4b/68/55/-1/e1/b-/4b/aa/-9/14/f-/5f/f6/ed/c1/c2/29-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Sita Tārā on a silver background"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/5c272da7-f579-4f1a-8aeb-c9f050e4b945/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/5c272da7-f579-4f1a-8aeb-c9f050e4b945",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/72/dd/69/71/-d/bb/e-/45/ea/-9/d2/e-/fc/31/ec/d4/a7/1c-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Amitāyus. Detail: man and woman at bottom left"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/687912ac-6a2e-4dd8-875c-552b36b73f61/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/687912ac-6a2e-4dd8-875c-552b36b73f61",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.stack.rdc.library.northwestern.edu/public/c1/f0/8b/5b/-e/8f/1-/42/0d/-9/82/f-/45/07/55/74/66/23-manifest.json",
+      "type": "Manifest",
+      "label": { "none": ["Tsongkapa. Detail: inscription"] },
+      "thumbnail": [
+        {
+          "id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/b9cec8fe-9f06-4489-9a75-eac48fdc4c66/full/600,/0/default.jpg",
+          "type": "Image",
+          "service": [
+            {
+              "@id": "https://iiif.stack.rdc.library.northwestern.edu/iiif/2/b9cec8fe-9f06-4489-9a75-eac48fdc4c66",
+              "@type": "ImageService2",
+              "profile": "level2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
