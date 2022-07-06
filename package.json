@@ -1,6 +1,6 @@
 {
   "name": "@mathewjordan/hydroponic",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "IIIF Collection grow kit for @samvera/bloom-iiif",
   "main": "index.js",
   "scripts": {
