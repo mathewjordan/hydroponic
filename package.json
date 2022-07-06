@@ -48,5 +48,8 @@
   ],
   "keywords": [
     "iiif"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
