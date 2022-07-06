@@ -1,3 +1,3 @@
-import { Hydroponic } from "@/hydroponic";
+import { Hydroponic } from "./hydroponic";
 
 export { Hydroponic };

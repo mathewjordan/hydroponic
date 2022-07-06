@@ -4,37 +4,15 @@ import {
   AnnotationPage,
   Canvas,
   Collection,
-  ContentResource,
-  ExternalWebResource,
-  InternationalString,
   Manifest,
 } from "@iiif/presentation-3";
-import { convertPresentation2 } from "@iiif/parser/presentation-2";
+import {
+  HydroponicInstance,
+  HydroponicItem,
+  HydroponicResource,
+} from "./types/hydroponic";
 import { useEffect, useState } from "react";
-
-export type HydroponicInstance = {
-  id: string;
-  label: InternationalString;
-  summary?: InternationalString;
-  homepage?: any;
-};
-
-export type HydroponicItem = {
-  id: string;
-  href?: string;
-};
-
-export interface HydroponicResource extends ExternalWebResource {
-  label?: InternationalString;
-}
-
-export type HydroponicConfig = {};
-
-export interface HydroponicGrow {
-  instance: HydroponicInstance;
-  items: HydroponicItem[];
-}
-
+import { convertPresentation2 } from "@iiif/parser/presentation-2";
 export class Hydroponic {
   vaultFetcher = (url: string) => {
     const [data, setData] = useState<Manifest | Collection | undefined>();
