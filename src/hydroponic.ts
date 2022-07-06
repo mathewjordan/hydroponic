@@ -1,7 +1,13 @@
 import {
-  CollectionNormalized,
+  Annotation,
+  AnnotationBody,
+  AnnotationPage,
+  Canvas,
+  Collection,
+  ContentResource,
+  ExternalWebResource,
   InternationalString,
-  ManifestNormalized,
+  Manifest,
 } from "@iiif/presentation-3";
 import { convertPresentation2 } from "@iiif/parser/presentation-2";
 import { useEffect, useState } from "react";
@@ -18,6 +24,10 @@ export type HydroponicItem = {
   href?: string;
 };
 
+export interface HydroponicResource extends ExternalWebResource {
+  label?: InternationalString;
+}
+
 export type HydroponicConfig = {};
 
 export interface HydroponicGrow {
@@ -26,12 +36,8 @@ export interface HydroponicGrow {
 }
 
 export class Hydroponic {
-  constructor(config: Partial<HydroponicConfig>) {}
-
   vaultFetcher = (url: string) => {
-    const [data, setData] = useState<
-      ManifestNormalized | CollectionNormalized | undefined
-    >();
+    const [data, setData] = useState<Manifest | Collection | undefined>();
 
     useEffect(() => {
       fetch(url).then((response) =>
@@ -59,20 +65,38 @@ export class Hydroponic {
       const entry = { id, type, label, thumbnail, homepage };
 
       if (!thumbnail) {
-        const body = data.items[0].items[0].items[0].body;
-        delete body.label;
-        entry.thumbnail = [body];
+        let canvas;
+        let annotationPage;
+        let annotation;
+        let body;
+
+        canvas = data?.items[0] as Canvas;
+
+        if (canvas && canvas.items)
+          annotationPage = canvas.items[0] as AnnotationPage;
+        if (annotationPage && annotationPage.items)
+          annotation = annotationPage.items[0] as Annotation;
+        if (annotation && annotation.body)
+          body = annotation.body as AnnotationBody as HydroponicResource;
+
+        if (body) {
+          const thumbnailEntry = {
+            ...body,
+          };
+
+          delete thumbnailEntry.label;
+          entry.thumbnail = [thumbnailEntry];
+        }
       }
 
       if (item?.href) {
-        entry.homepage = [
-          {
-            id: item.href,
-            type: "Text",
-            label,
-            format: "text/html",
-          },
-        ];
+        const homepage = {
+          id: item.href,
+          type: "Text",
+          label,
+          format: "text/html",
+        } as HydroponicResource;
+        entry.homepage = [homepage];
       }
 
       return entry;
