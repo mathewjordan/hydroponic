@@ -7,6 +7,7 @@ import {
   Manifest,
 } from "@iiif/presentation-3";
 import {
+  HydroponicConfig,
   HydroponicInstance,
   HydroponicItem,
   HydroponicResource,
@@ -14,6 +15,12 @@ import {
 import { useEffect, useState } from "react";
 import { convertPresentation2 } from "@iiif/parser/presentation-2";
 export class Hydroponic {
+  private readonly config: HydroponicConfig;
+
+  constructor(config: Partial<HydroponicConfig>) {
+    this.config = Object.assign({});
+  }
+
   vaultFetcher = (url: string) => {
     const [data, setData] = useState<Manifest | Collection | undefined>();
 
