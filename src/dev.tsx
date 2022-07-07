@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Hydroponic } from "./index";
+import Hydroponic from "./index";
 import { Collection } from "@iiif/presentation-3";
 import Bloom from "@samvera/bloom-iiif";
 import { instance, items } from "../seeds/tankas-voyager-linrothe";

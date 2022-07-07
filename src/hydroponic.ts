@@ -15,7 +15,7 @@ import {
 import { useEffect, useState } from "react";
 import { convertPresentation2 } from "@iiif/parser/presentation-2";
 
-export class Hydroponic {
+export default class Hydroponic {
   constructor(config: Partial<HydroponicConfig>) {
     console.log(config);
   }
