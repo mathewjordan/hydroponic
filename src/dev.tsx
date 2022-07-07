@@ -9,7 +9,7 @@ const Wrapper: React.FC = () => {
   /**
    * Instantiate Hydroponic and grow the instance.
    */
-  const hydroponic = new Hydroponic();
+  const hydroponic = new Hydroponic({});
   const collection = hydroponic.grow(instance, items) as Collection;
 
   return (

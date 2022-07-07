@@ -14,11 +14,9 @@ import {
 } from "./types/hydroponic";
 import { useEffect, useState } from "react";
 import { convertPresentation2 } from "@iiif/parser/presentation-2";
-export class Hydroponic {
-  private readonly config: HydroponicConfig;
 
+export class Hydroponic {
   constructor(config: Partial<HydroponicConfig>) {
-    this.config = Object.assign({});
     console.log(config);
   }
 

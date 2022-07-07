@@ -16,7 +16,7 @@ export interface HydroponicResource extends ExternalWebResource {
   label?: InternationalString;
 }
 
-export type HydroponicConfig = {};
+export type HydroponicConfig = { config?: {} };
 
 export interface HydroponicGrow {
   instance: HydroponicInstance;
