@@ -19,6 +19,7 @@ export class Hydroponic {
 
   constructor(config: Partial<HydroponicConfig>) {
     this.config = Object.assign({});
+    console.log(config);
   }
 
   vaultFetcher = (url: string) => {
